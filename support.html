@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Email Customer Service — Official Support & Toll-free</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/0/05/AT%26T_Globe_2016.svg" type="image/svg+xml">
+  <meta name="description" content="Premium SBCGlobal-inspired Customer Service page — support, help guides, and toll-free number. Responsive, fast, corporate design.">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f4f8fc;
+      --card:#ffffff;
+      --accent:#004d9f; /* SBCGlobal-inspired dark blue */
+      --accent-2:#0072ce; /* AT&T-style bright blue */
+      --muted:#5f6b7a;
+      --shadow: 0 6px 24px rgba(13, 27, 42, 0.12);
+      --soft-shadow: 0 8px 30px rgba(9, 30, 66, 0.06);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Poppins', Arial, sans-serif;
+      background:var(--bg);
+      color:#0b1b2b;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    .container{max-width:1180px;margin:0 auto;padding:32px 20px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid #e2e8f0;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo-img{height:50px;width:auto;display:block}
+    .brand h1{margin:0;font-size:20px;font-weight:700;color:var(--accent)}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    nav{display:flex;gap:18px;flex-wrap:wrap}
+    .nav-link{font-weight:600;color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;transition:.2s}
+    .nav-link:hover{background:rgba(0,77,159,0.08);color:var(--accent)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 400px;gap:28px;align-items:center;margin-top:28px}
+    .eyebrow{font-size:13px;font-weight:700;color:var(--accent-2);background:rgba(0,114,206,0.08);padding:6px 10px;border-radius:999px;display:inline-block}
+    .headline{font-family:'Playfair Display',serif;font-size:34px;margin:14px 0;line-height:1.2;color:var(--accent)}
+    .sub{color:var(--muted);margin-bottom:20px}
+
+    .toll{display:flex;align-items:center;gap:16px;background:#ffffff;padding:16px 20px;border-radius:14px;box-shadow:var(--soft-shadow)}
+    .toll .phone{font-size:22px;font-weight:800;color:var(--accent-2)}
+    .badge{font-size:12px;color:var(--muted)}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;background:var(--accent-2);color:white;font-weight:600;cursor:pointer;border:none;box-shadow:0 6px 20px rgba(0,114,206,0.18);transition:.2s}
+    .btn:hover{transform:translateY(-3px)}
+    .btn.secondary{background:transparent;border:1px solid var(--accent-2);color:var(--accent-2);box-shadow:none}
+
+    /* Card */
+    .card{background:var(--card);border-radius:14px;padding:22px;box-shadow:var(--shadow)}
+    .card h3{margin-top:0;color:var(--accent)}
+    .form-row{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+    .form-row input, .form-row select, .form-row textarea{
+      flex:1;
+      padding:12px 15px;
+      border-radius:10px;
+      border:1px solid #d1d9e6;
+      font-size:15px;
+      line-height:1.4;
+      width:100%;
+    }
+    .form-row input::placeholder,
+    .form-row textarea::placeholder{
+      color:#888;
+      opacity:1;
+      font-size:15px;
+    }
+    .submit{width:100%}
+
+    /* Features */
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:50px 0}
+    .feature{background:var(--card);padding:20px;border-radius:12px;box-shadow:var(--soft-shadow);transition:.2s}
+    .feature:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(9,30,66,0.08)}
+    .feature h4{margin:0 0 8px;color:var(--accent)}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+
+    /* FAQ */
+    .split{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+    .faq h3{margin-top:0;color:var(--accent)}
+    .qa{background:var(--card);padding:14px;border-radius:12px;margin-bottom:12px;border-left:4px solid var(--accent-2)}
+    .qa h5{margin:0 0 6px;color:var(--accent-2)}
+
+    /* Footer */
+    footer{text-align:center;padding:32px 16px;color:var(--muted);font-size:14px;border-top:1px solid #e2e8f0;margin-top:40px}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .split{grid-template-columns:1fr}
+    }
+    @media(max-width:600px){
+      .features{grid-template-columns:1fr}
+      .headline{font-size:26px}
+      .phone{font-size:20px}
+      .form-row{flex-direction:column}
+    }
+    a.phone {
+  text-decoration: none; 
+  color: #004d9f;        /* dark blue for phone number text */
+  font-weight: 700;      /* makes it bold */
+  font-size: 1.3em;      /* makes it stand out */
+}
+
+a.btn {
+  text-decoration: none;
+  color: #fff;           /* white text */
+  background: #0072ce;   /* button blue */
+  padding: 12px 24px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+a.btn:hover {
+  background: #0056b3;   /* darker blue on hover */
+  transform: scale(1.05);
+}
+a.phone {
+  text-decoration: none;
+  color: #004d9f;
+  font-weight: 700;
+  font-size: 1.3em;
+  white-space: nowrap;   /* 🔒 prevents wrapping */
+  display: inline-block;
+}
+@media (max-width: 480px) {
+  a.phone {
+    font-size: 1.1em;   /* slightly smaller for mobiles */
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <!-- Placeholder for SBCGlobal logo -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/AT%26T_Globe_2016.svg" alt="Logo" class="logo-img">
+        <div>
+          <h1>EmailAssistPro 24x7</h1>
+          <p>Official email support & troubleshooting</p>
+        </div>
+      </div>
+      <nav>
+        <a class="nav-link" href="#how">How To</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span class="eyebrow">24/7 Verified Support</span>
+          <h2 class="headline">Get Help with Your Email — Fast & Secure</h2>
+          <p class="sub">Troubleshoot login, password reset, configuration and account recovery issues with expert guidance.</p>
+          <div class="toll">
+            <div>
+              <div style="font-size:12px;color:var(--muted)">TOLL-FREE</div>
+              <a href="tel:+18339302928" class="phone">+1 833-930-2928</a>
+            </div>
+            <a href="tel:+18339302928" class="btn">Call Now</a>
+          </div>
+        </div>
+
+        <aside class="card" id="contact">
+          <h3>Request Support</h3>
+          <form onsubmit="event.preventDefault();alert('Thank you, we will contact you shortly.')">
+            <div class="form-row">
+              <input type="text" placeholder="Full Name" required>
+              <input type="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-row">
+              <select>
+                <option>Account / Password</option>
+                <option>Email Setup</option>
+                <option>Sending/Receiving</option>
+                <option>Security Issues</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <input type="tel" placeholder="Phone">
+            </div>
+            <a href="tel:+18339302928" class="btn submit">Get Support</a>
+          </form>
+        </aside>
+      </section>
+
+      <section class="features" id="how">
+        <div class="feature">
+          <h4>Password Reset</h4>
+          <p>Recover and reset your email passwords quickly and securely.</p>
+        </div>
+        <div class="feature">
+          <h4>Email Setup</h4>
+          <p>Step-by-step support for Outlook, Apple Mail, and mobile devices.</p>
+        </div>
+        <div class="feature">
+          <h4>Account Security</h4>
+          <p>Secure accounts with two-step verification and spam protection.</p>
+        </div>
+      </section>
+
+      <section class="split">
+        <div class="faq" id="faq">
+          <h3>Frequently Asked Questions</h3>
+          <div class="qa">
+            <h5>How do I reset my password?</h5>
+            <p>Go to the recovery page, verify with your recovery email/phone, and reset your password. Call if further help is needed.</p>
+          </div>
+          <div class="qa">
+            <h5>Why can't I send or receive emails?</h5>
+            <p>Check IMAP/POP settings, internet connection, and account status. Support can guide you step-by-step.</p>
+          </div>
+          <div class="qa">
+            <h5>How do I configure Outlook?</h5>
+            <p>Use IMAP: imap.mail.att.net and SMTP: smtp.mail.att.net with SSL/TLS enabled. Request full guide if needed.</p>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3>Live Help</h3>
+          <p>Talk with an expert or request a callback. 24/7 available support.</p>
+          <a href="tel:+18339302928" class="btn">Connect with Expert</a>
+          <a href="tel:+18339302928" class="btn secondary">Call Now</a>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <small>© <span id="year"></span>© 2025 EmailAssistPro 24x7 — All rights reserved.</small>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

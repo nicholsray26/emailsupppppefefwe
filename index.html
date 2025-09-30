@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Email Customer Service & Helpline | EmailAssistPro 24x7</title>
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/0/05/AT%26T_Globe_2016.svg" type="image/svg+xml">
+  <meta name="description" content="EmailAssistPro 24x7 — fast, reliable email customer service, email helpline & assistance. Troubleshooting, setup, recovery. Independent tech support available 24/7.">
+  <meta name="keywords" content="email customer service, email helpline, email assistance, sbcglobal email helpline, sbcglobal email help, sbcglobal email customer service, sbcglobal mail support">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f4f8fc;
+      --card:#ffffff;
+      --accent:#004d9f; /* dark blue */
+      --accent-2:#0072ce; /* bright blue */
+      --muted:#5f6b7a;
+      --shadow: 0 6px 24px rgba(13, 27, 42, 0.12);
+      --soft-shadow: 0 8px 30px rgba(9, 30, 66, 0.06);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:'Poppins',Arial,sans-serif;background:var(--bg);color:#0b1b2b;line-height:1.5;-webkit-font-smoothing:antialiased}
+    .container{max-width:1180px;margin:0 auto;padding:32px 20px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid #e2e8f0;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:grid;place-items:center;color:#fff;font-weight:800;box-shadow:0 8px 24px rgba(0,114,206,.2)}
+    .brand h1{margin:0;font-size:20px;font-weight:700;color:var(--accent)}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+    nav{display:flex;gap:18px;flex-wrap:wrap}
+    .nav-link{font-weight:600;color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;transition:.2s}
+    .nav-link:hover{background:rgba(0,77,159,0.08);color:var(--accent)}
+
+    /* Links as buttons (no underline) */
+    a.btn, a.phone {text-decoration:none}
+    a.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:12px;background:var(--accent-2);color:#fff;font-weight:600;cursor:pointer;border:none;box-shadow:0 6px 20px rgba(0,114,206,0.18);transition:.2s}
+    a.btn:hover{transform:translateY(-3px)}
+    a.btn.secondary{background:transparent;border:1px solid var(--accent-2);color:var(--accent-2);box-shadow:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 400px;gap:28px;align-items:center;margin-top:28px}
+    .eyebrow{font-size:13px;font-weight:700;color:var(--accent-2);background:rgba(0,114,206,0.08);padding:6px 10px;border-radius:999px;display:inline-block}
+    .headline{font-family:'Playfair Display',serif;font-size:34px;margin:14px 0;line-height:1.2;color:var(--accent)}
+    .sub{color:var(--muted);margin-bottom:20px}
+    .toll{display:flex;align-items:center;gap:16px;background:#ffffff;padding:16px 20px;border-radius:14px;box-shadow:var(--soft-shadow)}
+    .toll .label{font-size:12px;color:var(--muted)}
+    a.phone{font-size:22px;font-weight:800;color:var(--accent-2);white-space:nowrap;display:inline-block}
+
+    /* Card / Form */
+    .card{background:var(--card);border-radius:14px;padding:22px;box-shadow:var(--shadow)}
+    .card h3{margin-top:0;color:var(--accent)}
+    .form-row{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+    .form-row input,.form-row select,.form-row textarea{flex:1;padding:12px 15px;border-radius:10px;border:1px solid #d1d9e6;font-size:15px;line-height:1.4;width:100%}
+    .form-row input::placeholder,.form-row textarea::placeholder{color:#888;opacity:1;font-size:15px}
+    .submit{width:100%}
+
+    /* Trust badges */
+    .badges{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0}
+    .badge{background:var(--card);padding:14px;border-radius:12px;box-shadow:var(--soft-shadow);display:flex;align-items:center;gap:10px}
+    .icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:grid;place-items:center;color:#fff;font-weight:800}
+
+    /* Features */
+    .features{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:40px 0}
+    .feature{background:var(--card);padding:20px;border-radius:12px;box-shadow:var(--soft-shadow);transition:.2s}
+    .feature:hover{transform:translateY(-6px);box-shadow:0 16px 36px rgba(9,30,66,0.08)}
+    .feature h4{margin:0 0 8px;color:var(--accent)}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+
+    /* How it works */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:34px 0}
+    .step{background:var(--card);padding:18px;border-radius:12px;box-shadow:var(--soft-shadow)}
+    .step h5{margin:8px 0 6px;color:var(--accent)}
+
+    /* Reviews */
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:28px 0}
+    .review{background:var(--card);padding:16px;border-radius:12px;box-shadow:var(--soft-shadow)}
+    .review strong{display:block;margin-bottom:6px}
+
+    /* Info columns */
+    .info{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:28px 0}
+    .info .card p{margin:6px 0;color:var(--muted)}
+
+    /* FAQ snippet for SEO keywords */
+    .seo-block{background:var(--card);padding:16px;border-radius:12px;box-shadow:var(--soft-shadow);margin:26px 0;color:var(--muted);font-size:14px}
+
+    /* Footer */
+    footer{text-align:center;padding:32px 16px;color:var(--muted);font-size:14px;border-top:1px solid #e2e8f0;margin-top:40px}
+
+    /* Responsive */
+    @media(max-width:1000px){
+      .hero{grid-template-columns:1fr}
+      .features{grid-template-columns:repeat(2,1fr)}
+      .steps{grid-template-columns:1fr 1fr}
+      .reviews{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:640px){
+      .features,.steps,.reviews,.badges,.info{grid-template-columns:1fr}
+      .headline{font-size:26px}
+      a.phone{font-size:20px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div>
+          <h1>EmailAssistPro 24x7</h1>
+          <p>Independent email customer service & assistance — USA-based</p>
+        </div>
+      </div>
+      <nav>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#how">How It Works</a>
+        <a class="nav-link" href="#reviews">Reviews</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <span class="eyebrow">24/7 Email Assistance</span>
+          <h2 class="headline">Email Customer Service & Helpline — Fast, Secure & Friendly</h2>
+          <p class="sub">Facing email issues? Our experts provide step-by-step email assistance: login problems, password resets, setup & sync, account recovery, and spam/security cleanup.</p>
+
+          <div class="toll">
+            <div>
+              <div class="label">TOLL-FREE</div>
+              <a href="tel:+18339302928" class="phone">+1 (833) 930‑2928</a>
+            </div>
+            <a href="tel:+18339302928" class="btn">Call Now</a>
+          </div>
+
+          <div class="badges">
+            <div class="badge"><div class="icon">US</div><div><strong>USA Based</strong><div style="color:var(--muted);font-size:13px">Real people, real help</div></div></div>
+            <div class="badge"><div class="icon">✓</div><div><strong>100% Guaranteed</strong><div style="color:var(--muted);font-size:13px">Satisfaction-first</div></div></div>
+            <div class="badge"><div class="icon">24</div><div><strong>Open 24/7</strong><div style="color:var(--muted);font-size:13px">We never close</div></div></div>
+          </div>
+        </div>
+
+        <!-- CONTACT CARD -->
+        <aside class="card" id="contact">
+          <h3>Request Support</h3>
+          <form id="supportForm">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Full Name" required>
+              <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-row">
+              <select name="issue" required>
+                <option value="Email Login / Password">Email Login / Password</option>
+                <option value="Setup & Sync (Outlook / Mobile)">Setup & Sync (Outlook / Mobile)</option>
+                <option value="Sending / Receiving">Sending / Receiving</option>
+                <option value="Security / Spam Cleanup">Security / Spam Cleanup</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <input type="tel" name="phone" placeholder="Phone">
+            </div>
+            <button type="submit" class="btn submit">Get Support</button>
+          </form>
+        </aside>
+      </section>
+
+      <!-- OUR GOAL / VALUE PROP -->
+      <section class="card" id="services" style="margin-top:26px">
+        <h3 style="margin-top:0;color:var(--accent)">Email Help? We've Got You Covered.</h3>
+        <p>In a rapidly evolving tech landscape, our mission is simple: make email easy. We provide reliable <strong>email customer service</strong>, responsive <strong>email helpline</strong>, and friendly <strong>email assistance</strong> so you stay connected without stress. Our Technology Experts guide you end-to-end and stand by their work with a satisfaction guarantee.</p>
+      </section>
+
+      <!-- UNINTERRUPTED EMAIL -->
+      <section class="card" style="margin-top:18px">
+        <h3 style="margin-top:0;color:var(--accent)">Uninterrupted Email</h3>
+        <p>Waiting on important updates or family photos shouldn’t be stressful. Our advisors quickly diagnose delays, configure new accounts, and restore reliable delivery so you never miss what matters. With our support, your inbox runs smoothly while you focus on your day.</p>
+      </section>
+
+      <!-- FOUR FEATURES -->
+      <section class="features">
+        <div class="feature">
+          <div class="icon" aria-hidden>✆</div>
+          <h4>Accessible</h4>
+          <p>Reach us your way — call, email, or chat. Connect securely with dedicated experts focused on resolving your issues, start to finish.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden>★</div>
+          <h4>Expert</h4>
+          <p>Clear, friendly guidance. We listen, diagnose, and explain in plain English. Help for email login issues and common email problems.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden>☁</div>
+          <h4>Connect</h4>
+          <p>Convenient remote support saves time and headaches — from malware removal to data recovery and cleanup, without leaving home.</p>
+        </div>
+        <div class="feature">
+          <div class="icon" aria-hidden>盾</div>
+          <h4>Protect</h4>
+          <p>Membership that safeguards your digital life with maintenance, backups, and performance tuning — peace of mind, always.</p>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section id="how">
+        <h3 style="color:var(--accent)">How Our Support Service Works</h3>
+        <div class="steps">
+          <div class="step">
+            <div class="icon" aria-hidden>①</div>
+            <h5>Step 01 — Connect</h5>
+            <p>Reach out to connect with a specialist. We establish a secure session using trusted software.</p>
+          </div>
+          <div class="step">
+            <div class="icon" aria-hidden>②</div>
+            <h5>Step 02 — Diagnose</h5>
+            <p>Experienced professionals assess your issue and provide tailored recommendations.</p>
+          </div>
+          <div class="step">
+            <div class="icon" aria-hidden>③</div>
+            <h5>Step 03 — Repair</h5>
+            <p>We resolve problems quickly to minimize disruption and restore smooth email performance.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS -->
+      <section id="reviews">
+        <h3 style="color:var(--accent)">Verified Customer Reviews</h3>
+        <div class="reviews">
+          <div class="review"><strong>Martha</strong><div style="color:var(--muted)">“They cleaned up my inbox and recovered lost emails. Fantastic service — highly recommended!”</div></div>
+          <div class="review"><strong>John.</strong><div style="color:var(--muted)">“I almost lost everything, but their tools and support restored my messages. Thank you!”</div></div>
+          <div class="review"><strong>Alex</strong><div style="color:var(--muted)">“Couldn’t log in, purchased the password kit and contacted support. Problem solved in minutes!”</div></div>
+        </div>
+      </section>
+
+      <!-- SEO / KEYWORD SUPPORT WITH DISCLOSURE -->
+      <section class="seo-block" aria-label="Search support">
+        <strong>Search help we provide:</strong> We’re an independent service for email issues. Common searches we assist with include <em>email customer service</em>, <em>email helpline</em>, <em>email assistance</em>, and legacy-domain help requests such as <em>sbcglobal email helpline</em>, <em>sbcglobal email help</em>, <em>sbcglobal email customer service</em>, and <em>sbcglobal mail support</em>. We are not affiliated with any email provider. Please see the disclaimer below.
+      </section>
+
+      <!-- CONTACT INFO -->
+      <section class="info" aria-labelledby="contact-info">
+        <div class="card">
+          <h4 id="contact-info" style="margin:0 0 6px;color:var(--accent)">Convenient Office Hours</h4>
+          <p><strong>Mon–Fri:</strong> 9:00 AM – 6:00 PM EST</p>
+          <p><strong>Sat–Sun:</strong> 10:00 AM – 2:00 PM MST</p>
+        </div>
+        <div class="card">
+          <h4 style="margin:0 0 6px;color:var(--accent)">Office Headquarters</h4>
+          <p>5627 Cypress Creek Lane, Houston, TX 77084, United States</p>
+        </div>
+        <div class="card">
+          <h4 style="margin:0 0 6px;color:var(--accent)">Contact Info</h4>
+          <p><strong>Email:</strong> <a class="nav-link" href="mailto:support@emailassistpro24x7.com" style="padding:0">support@emailassistpro24x7.com</a></p>
+          <p><strong>Phone:</strong> <a class="nav-link" href="tel:+18339302928" style="padding:0">+1 (833) 930‑2928</a></p>
+        </div>
+      </section>
+
+      <!-- DISCLAIMER -->
+      <section class="card" style="margin-top:12px">
+        <h4 style="margin:0 0 6px;color:var(--accent)">Disclaimer</h4>
+        <p style="margin:0;color:var(--muted)">All brand names, trademarks, logos, images, or product names mentioned on our website, in our advertisements, or in our communications remain the property of their respective owners. They are used strictly for descriptive and identification purposes only under applicable laws, including fair use / nominative use doctrines. If you require free technical support, you should directly contact the official support team of your email service provider through their official channels. We are an independent service provider.</p>
+      </section>
+    </main>
+
+    <footer>
+      <small>© 2025 EmailAssistPro 24x7 — All rights reserved.</small>
+    </footer>
+  </div>
+</body>
+</html>
